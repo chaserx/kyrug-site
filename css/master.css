@@ -1,0 +1,29 @@
+html{
+	
+}
+body{
+	
+}
+
+.container{
+	
+}
+#header{
+	text-align:center;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:1em;
+	margin-bottom:1em;
+	width: 300px;
+}
+#footer{
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:1em;
+	width:950px;
+	color:#000;
+	text-align:center;
+}
+.heart{
+	color: #A81838;
+}

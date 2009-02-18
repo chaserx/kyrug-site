@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>KyRUG - Kentucky Ruby User Group</title>
+	<script src="js/jquery-1.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.tweet.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	<link rel="stylesheet" href="css/jquery.tweet.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	<link rel="stylesheet" href="css/jquery.tweet.query.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" /> 
+	<!--[if IE]>
+	  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+	<![endif]-->
+	<script type='text/javascript'>
+	    $(document).ready(function(){
+	        $(".tweet").tweet({
+	            username: "kyrug",
+	            join_text: "auto",
+	            avatar_size: 32,
+	            count: 1,
+	            auto_join_text_default: "we said,",
+	            auto_join_text_ed: "we",
+	            auto_join_text_ing: "we were",
+	            auto_join_text_reply: "we replied to",
+	            auto_join_text_url: "we were checking out",
+	            loading_text: "loading tweets...",
+				query:"from%3Asouthard+%23kyrug"
+	        });
+	    });
+	</script>
+	<!--
+		acknowledgment: tweet! jquery plugin by seaofclouds. http://github.com/seaofclouds/tweet/tree/master
+		 
+	//-->
+</head>
+
+<body>
+	<div class="container">
+		<div class="span-24 last column">
+		  <div id="header">
+		  	<img src="images/logo.jpg" width="270" height="93" alt="Kentucky Ruby User Group" />
+		  </div>
+		</div>
+		<div class="span-24 last column">
+			<div class="span-3 prepend-5 column">
+				<img src="images/ruby.jpg" width="100" height="100" alt="Ruby" />
+			</div>
+			<div class="span-12 append-3 last column">
+				<dl>
+					<dt>Where:</dt>
+					<dd>W.T. Young Library on the campus of the University of Kentucky<br />401 Hilltop Ave, Lexington, KY 40508 (<a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=401+Hilltop+Avenue,+Lexington,+KY+40508&amp;sll=38.03214,-84.502582&amp;sspn=0.001565,0.003417&amp;ie=UTF8&amp;t=h&amp;z=16" title="Google Maps">map</a> | <a href="http://www.uky.edu/Libraries/page.php?lweb_id=25" title="Driving Directions, Parking and Maps - Driving Directions">driving directions &amp; parking info</a>)<br />(please note: actual location may vary)</dd>
+					<dt>When:</dt>
+					<dd>Second Thursday of Each Month from 7:30 to 9 PM</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="span-24 last">
+		  <div class="span-16 column">
+			<h3>Lastest Meeting Announcement</h3>
+			<hr />
+		    <div class="tweet"></div>
+			For more, follow the <a href="http://groups.google.com/group/kyrug" title="Kentucky Ruby user group | Google Groups">Google Groups mailing list</a> or the <a href="http://twitter.com/kyrug" title="Twitter / kyrug">Twitter Feed</a>. Thanks.
+		  </div>
+		  <div class="span-8 last column">
+		    <h3>Communication</h3>
+			<hr />
+			<ul>
+				<li>Google Groups: <a href="http://groups.google.com/group/kyrug" title="Kentucky Ruby user group | Google Groups">KyRUG</a></li>
+				<li>IRC: irc.freenode.net #krug</li>
+				<li>Twitter: <a href="http://twitter.com/kyrug">twitter.com/kyrug</a></li>
+			</ul>
+		  </div>
+		
+		</div>
+		
+	</div>
+	<div id="footer">
+		<hr />
+		<p>We <span class="heart">&hearts;</span> Ruby!</p>
+	</div>
+	
+</body>
+</html>

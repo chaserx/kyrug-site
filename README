@@ -4,3 +4,11 @@ This repo is to explore ideas for the KyRUG website.
 
 Currently, the index page pulls tweets from the KyRUG twitter account with a kyrug_meeting hashtag using Tweet!, a jquery plugin by seaofclouds. http://github.com/seaofclouds/tweet/tree/master
 
+
+Ideas Discussed on 3.12.09:
+[ ] github
+[ ] pull users from google doc
+[ ] list of participants
+[ ] static SEO page
+[ ] show static unless js enabled
+[ ] user tweets

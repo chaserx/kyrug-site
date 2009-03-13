@@ -51,8 +51,10 @@
 					var githubFeed = 'http://github.com/api/v1/json/'+githubid+'?callback=?';
 					
 					$(document).ready(function(){
-						//$('.people').append('<dt id=#'+githubid+'>' + template + '</dt>');
-						$.getJSON(githubFeed, function getgit(data){
+						//acknowledgement: the following block fixed courtsey of Leslie Hensley. 
+						var personUl = $('<ul></ul>');
+            $('.people').append('<li>' + template + '</li>').append(personUl);
+            $.getJSON(githubFeed, function(data){
 							//console.log(data);
 							$(data.user.repositories).each(function(){
 								//console.log(this);
@@ -60,29 +62,11 @@
 								var project = this.name;
 								var projectURL = this.url;
 								var githubURLtemplate = '<a href="'+projectURL+'">'+project+'</a>';
-								$('.people').append('<dt id=#'+githubid+'>' + template + '</dt>' + '<dd>' + githubURLtemplate + '</dd>' );
+								personUl.append('<li>' + githubURLtemplate + '</li>' );
 							});
 						});
 						
 					});
-					//get the repositories from github and place them after their owner
-					/*var githubFeed = 'http://github.com/api/v1/json/'+githubid+'?callback=?';
-					$.getJSON(githubFeed, function getgit(data){
-						console.log(data);
-						$(data.user.repositories).each(function(){
-							console.log(this);
-							console.log(this.name);
-							var project = this.name;
-							var projectURL = this.url;
-							var githubURLtemplate = '<a href="'+projectURL+'">'+project+'</a>';
-							
-							$(document).ready(function(){
-								console.log(githubURLtemplate); //this works 
-								$('<dt id=#'+githubid+'>').after(githubURLtemplate); //why doesn't this?
-							});
-						});
-					});
-					*/
 				});
 			}
 
@@ -130,7 +114,7 @@
 		<div class="span-24 last column">
 			<hr />
 			<h3>Rubyists | Projects</h3>
-			<dl class="people"></dl>
+			<ul class="people"></ul>
 		</div>
 	</div>
 	<div id="footer">

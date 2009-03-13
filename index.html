@@ -51,6 +51,7 @@
 					$(document).ready(function(){
 						$('.people').append('<dt id=#'+githubid+'>' + template + '</dt>');
 					});
+					//get the repositories from github and place them after their owner
 					var githubFeed = 'http://github.com/api/v1/json/'+githubid+'?callback=?';
 					$.getJSON(githubFeed, function getgit(data){
 						console.log(data);
@@ -62,8 +63,8 @@
 							var githubURLtemplate = '<a href="'+projectURL+'">'+project+'</a>';
 							
 							$(document).ready(function(){
-								console.log(githubURLtemplate);
-								$('#'+githubid).after('<dd>'+githubURLtemplate+'</dd>');
+								console.log(githubURLtemplate); //this works 
+								$('#'+githubid).after('<dd>'+githubURLtemplate+'</dd>'); //why doesn't this?
 							});
 						});
 					});

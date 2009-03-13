@@ -37,6 +37,16 @@
 		acknowledgment: tweet! jquery plugin by seaofclouds. http://github.com/seaofclouds/tweet/tree/master
 		 
 	//-->
+	<script type="text/javascript" charset="utf-8">
+		
+			function myFunc(arg){
+				console.log(arg);
+				$(arg.feed.entry).each(function(){console.log(this.gsx$name.$t)});
+				
+			}
+		
+	</script>
+	<script src="http://spreadsheets.google.com/feeds/list/pCQNoXf7oAzxCmdH-BR9ffw/1/public/values?alt=json-in-script&callback=myFunc" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>
@@ -75,7 +85,7 @@
 				<li>Twitter: <a href="http://twitter.com/kyrug">twitter.com/kyrug</a></li>
 			</ul>
 		  </div>
-		
+			
 		</div>
 		
 	</div>

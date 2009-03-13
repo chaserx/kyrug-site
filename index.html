@@ -42,11 +42,18 @@
 	<script type="text/javascript" charset="utf-8">
 		
 			function myFunc(arg){
-				console.log(arg);
+				$(console.log(arg));
 				$(arg.feed.entry).each(function(){console.log(this.gsx$name.$t)});
-				
+				$(arg.feed.entry).each(function(){
+					var person = this.gsx$name.$t;
+					var githubid = this.gsx$githubid.$t;
+					var template = '<a href="http://github.com/'+githubid+'">'+person+'</a>';
+					$(document).ready(function(){
+						$('.people').append('<li>' + template + '</li>');
+					});
+				});
 			}
-		
+
 	</script>
 	<script src="http://spreadsheets.google.com/feeds/list/pCQNoXf7oAzxCmdH-BR9ffw/1/public/values?alt=json-in-script&callback=myFunc" type="text/javascript" charset="utf-8"></script>
 </head>
@@ -87,9 +94,12 @@
 				<li>Twitter: <a href="http://twitter.com/kyrug">twitter.com/kyrug</a></li>
 			</ul>
 		  </div>
-			
 		</div>
-		
+		<div class="span-24 last column">
+			<hr />
+			<h3>Rubyists | Projects</h3>
+			<ul class="people"></ul>
+		</div>
 	</div>
 	<div id="footer">
 		<hr />

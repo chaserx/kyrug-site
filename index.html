@@ -42,17 +42,31 @@
 	<script type="text/javascript" charset="utf-8">
 		
 			function myFunc(arg){
-				$(console.log(arg));
-				$(arg.feed.entry).each(function(){console.log(this.gsx$name.$t)});
+				//$(console.log(arg));
+				//$(arg.feed.entry).each(function(){console.log(this.gsx$name.$t)});
 				$(arg.feed.entry).each(function(){
 					var person = this.gsx$name.$t;
 					var githubid = this.gsx$githubid.$t;
 					var template = '<a href="http://github.com/'+githubid+'">'+person+'</a>';
+					var githubFeed = 'http://github.com/api/v1/json/'+githubid+'?callback=?';
+					
 					$(document).ready(function(){
-						$('.people').append('<dt id=#'+githubid+'>' + template + '</dt>');
+						//$('.people').append('<dt id=#'+githubid+'>' + template + '</dt>');
+						$.getJSON(githubFeed, function getgit(data){
+							//console.log(data);
+							$(data.user.repositories).each(function(){
+								//console.log(this);
+								//console.log(this.name);
+								var project = this.name;
+								var projectURL = this.url;
+								var githubURLtemplate = '<a href="'+projectURL+'">'+project+'</a>';
+								$('.people').append('<dt id=#'+githubid+'>' + template + '</dt>' + '<dd>' + githubURLtemplate + '</dd>' );
+							});
+						});
+						
 					});
 					//get the repositories from github and place them after their owner
-					var githubFeed = 'http://github.com/api/v1/json/'+githubid+'?callback=?';
+					/*var githubFeed = 'http://github.com/api/v1/json/'+githubid+'?callback=?';
 					$.getJSON(githubFeed, function getgit(data){
 						console.log(data);
 						$(data.user.repositories).each(function(){
@@ -64,10 +78,11 @@
 							
 							$(document).ready(function(){
 								console.log(githubURLtemplate); //this works 
-								$('#'+githubid).after('<dd>'+githubURLtemplate+'</dd>'); //why doesn't this?
+								$('<dt id=#'+githubid+'>').after(githubURLtemplate); //why doesn't this?
 							});
 						});
 					});
+					*/
 				});
 			}
 

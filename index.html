@@ -49,7 +49,23 @@
 					var githubid = this.gsx$githubid.$t;
 					var template = '<a href="http://github.com/'+githubid+'">'+person+'</a>';
 					$(document).ready(function(){
-						$('.people').append('<li>' + template + '</li>');
+						$('.people').append('<dt id=#'+githubid+'>' + template + '</dt>');
+					});
+					var githubFeed = 'http://github.com/api/v1/json/'+githubid+'?callback=?';
+					$.getJSON(githubFeed, function getgit(data){
+						console.log(data);
+						$(data.user.repositories).each(function(){
+							console.log(this);
+							console.log(this.name);
+							var project = this.name;
+							var projectURL = this.url;
+							var githubURLtemplate = '<a href="'+projectURL+'">'+project+'</a>';
+							
+							$(document).ready(function(){
+								console.log(githubURLtemplate);
+								$('#'+githubid).after('<dd>'+githubURLtemplate+'</dd>');
+							});
+						});
 					});
 				});
 			}
@@ -98,7 +114,7 @@
 		<div class="span-24 last column">
 			<hr />
 			<h3>Rubyists | Projects</h3>
-			<ul class="people"></ul>
+			<dl class="people"></dl>
 		</div>
 	</div>
 	<div id="footer">

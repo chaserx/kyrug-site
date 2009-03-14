@@ -27,3 +27,17 @@ body{
 .heart{
 	color: #A81838;
 }
+ul.people{
+	list-style:none;
+}
+ul.people ul li{
+	display:inline;
+	list-style:none;
+	margin:0 0.5em;
+}
+ul.people li a:link, ul.people li a:visited{
+	text-decoration:none;
+}
+ul.people li a:hover, ul.people li a:active{
+	text-decoration:underline;
+}

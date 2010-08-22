@@ -40,44 +40,40 @@
 		acknowledgment: tweet! jquery plugin by seaofclouds. http://github.com/seaofclouds/tweet/tree/master
 		 
 	//-->
-	<script type="text/javascript" charset="utf-8">
-		
-			function myFunc(arg){
-				//$(console.log(arg));
-				//$(arg.feed.entry).each(function(){console.log(this.gsx$name.$t)});
-				$(arg.feed.entry).each(function(){
-					var person = this.gsx$name.$t;
-					var githubid = this.gsx$githubid.$t;
-					var template = '<a href="http://github.com/'+githubid+'">'+person+'</a>';
-					var githubFeed = 'http://github.com/api/v1/json/'+githubid+'?callback=?';
-					
-					$(document).ready(function(){
-						//acknowledgement: the following block fixed courtsey of Leslie Hensley. 
-						var personUl = $('<ul></ul>');
-            $('.people').append('<li>' + template + '</li>').append(personUl);
-            $.getJSON(githubFeed, function(data){
-							//console.log(data);
-							$(data.user.repositories).each(function(){
-								//console.log(this);
-								//console.log(this.name);
-								if (!this.private) {
-								  var project = this.name;
-								  var projectURL = this.url;
-								  var githubURLtemplate = '<a href="'+projectURL+'">'+project+'</a>';
-								  personUl.append('<li>' + githubURLtemplate + '</li>' );
-<<<<<<< HEAD:index.html
-								}
-=======
-							  }
->>>>>>> 1abfc5f7623737ef0ec275aa0ef879ea49ef7c18:index.html
-							});
-						});
-						
-					});
-				});
-			}
+  <script type="text/javascript" charset="utf-8"> 
 
-	</script>
+  			function myFunc(arg){
+  				//$(console.log(arg));
+  				//$(arg.feed.entry).each(function(){console.log(this.gsx$name.$t)});
+  				$(arg.feed.entry).each(function(){
+  					var person = this.gsx$name.$t;
+  					var githubid = this.gsx$githubid.$t;
+  					var template = '<a href="http://github.com/'+githubid+'">'+person+'</a>';
+  					var githubFeed = 'http://github.com/api/v1/json/'+githubid+'?callback=?';
+
+  					$(document).ready(function(){
+  						//acknowledgement: the following block fixed courtsey of Leslie Hensley. 
+  						var personUl = $('<ul></ul>');
+              $('.people').append('<li>' + template + '</li>').append(personUl);
+              $.getJSON(githubFeed, function(data){
+  							//console.log(data);
+  							$(data.user.repositories).each(function(){
+  								//console.log(this);
+  								//console.log(this.name);
+  								if (!this.private) {
+  								  var project = this.name;
+  								  var projectURL = this.url;
+  								  var githubURLtemplate = '<a href="'+projectURL+'">'+project+'</a>';
+  								  personUl.append('<li>' + githubURLtemplate + '</li>' );
+  							  }
+  							});
+  						});
+
+  					});
+  				});
+  			}
+
+  	</script>
 	<script src="http://spreadsheets.google.com/feeds/list/pCQNoXf7oAzxCmdH-BR9ffw/1/public/values?alt=json-in-script&amp;callback=myFunc" type="text/javascript" charset="utf-8"></script>
 </head>
 

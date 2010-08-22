@@ -60,10 +60,12 @@
 							$(data.user.repositories).each(function(){
 								//console.log(this);
 								//console.log(this.name);
-								var project = this.name;
-								var projectURL = this.url;
-								var githubURLtemplate = '<a href="'+projectURL+'">'+project+'</a>';
-								personUl.append('<li>' + githubURLtemplate + '</li>' );
+								if (!this.private) {
+								  var project = this.name;
+								  var projectURL = this.url;
+								  var githubURLtemplate = '<a href="'+projectURL+'">'+project+'</a>';
+								  personUl.append('<li>' + githubURLtemplate + '</li>' );
+								}
 							});
 						});
 						

@@ -1,37 +1,73 @@
 html{
-	
+	background: #f0e8d4 url(../images/RubyTan_03.png) no-repeat fixed top left;
+	/*font-family: Georgia, "Trebuchet MS", courier, sans-serif;*/
+	font: normal 14px/16px "Myriad Pro","myriad-pro-1","myriad-pro-2", Arial, Helvetica, sans-serif;
+	border-top: 5px solid rgb(209, 25, 25);
 }
 body{
-	
+  line-height: 1.5em;
 }
-
-.container{
-	
+#wrapper{
+  margin:20px auto;
+  width:960px;
+}
+#content{
+  padding:1em;
+  margin:1em;
+  background-color: #FFF;
+  border: 10px solid #FFF;
+  background:#FFF;
+  /* TESTING */
+  border: radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	/* END TESTING */
 }
 #header{
-	text-align:center;
-	margin-right:auto;
-	margin-left:auto;
-	margin-top:1em;
-	margin-bottom:1em;
-	width: 300px;
+  margin: 0px 0px 20px 0px;
+}
+#header h1{
+  font-size: 3em;
+  line-height:0.7em;
+  color:rgb(209, 25, 25);
+  /* TESTING 
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .8);
+  */
+}
+#header h1 span{
+  font-size: 0.6em;
+  color: #666;
+  /* TESTING
+  text-shadow: 0 1px 0 rgba(255,255,255,.8);
+  */
+}
+#what, #when, #where, #who, #how, #why{
+  margin-bottom:1em;
+}
+#how{
+  margin-top:1em;
 }
 #footer{
-	margin-right:auto;
-	margin-left:auto;
-	margin-top:1em;
-	width:950px;
-	color:#000;
-	text-align:center;
+  margin:0 auto;
+  padding-top:20px;
+  text-align:center;
 }
 .heart{
 	color: #A81838;
 }
+#who{
+  width:100%;
+  margin:auto;
+}
 ul.people{
 	list-style:none;
 }
+ul.people ul{
+  width:900px;
+  margin:auto;
+}
 ul.people ul li{
-	display:inline;
+	display:inline-block;
 	list-style:none;
 	margin:0 0.5em;
 }
@@ -40,4 +76,36 @@ ul.people li a:link, ul.people li a:visited{
 }
 ul.people li a:hover, ul.people li a:active{
 	text-decoration:underline;
+}
+
+#calendar{
+  display:none;
+}
+#map{
+  width:500px;
+  height:200px;
+  border: 1px solid #999;
+  border: radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+  padding:3px;
+  display:none;
+}
+#sublegal{
+  font-size: 0.6em;
+  margin-top:20px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+a:link, a:visited{
+  color:rgb(209, 25, 25);
+  text-decoration:none;
+}
+a:hover, a:active{
+  color:rgb(209, 25, 25);
+  text-decoration:underline;
+}
+#manning, #oreilly{
+  display:none;
 }

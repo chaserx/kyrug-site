@@ -1,46 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
 	<title>KyRUG - Kentucky Ruby Users Group</title>
-	<meta name="keywords" content="Ruby, Users Group, Ruby Users Group, Lexington, KY" />
+  <meta name="author" content="Chase Southard with lots of help and inspiration from friends">
+  <meta name="copyright" content="Copyright 2010 Kentucky Ruby Users Group">
+  <meta name="keywords" content="Ruby, Users Group, Ruby Users Group, Lexington, KY" />
 	<meta name="description" content="Kentucky Ruby Users Group meets monthly in Lexington, Ky. Our interests are widespread, but our language is the same. Ruby.">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/jquery.tweet.js" type="text/javascript" charset="utf-8"></script>
-	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-	<link rel="stylesheet" href="css/jquery.tweet.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-	<link rel="stylesheet" href="css/jquery.tweet.query.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-	<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" />
-	<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" /> 
-	<!--[if IE]>
-	  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
-	<![endif]-->
 	<link rel="icon" type="image/vnd.microsoft.icon" href="ruby.ico" />
-	<script type='text/javascript'>
-	    $(document).ready(function(){
-	        $(".tweet").tweet({
-	            username: "kyrug",
-	            join_text: "auto",
-	            avatar_size: 32,
-	            count: 1,
-	            auto_join_text_default: "we said,",
-	            auto_join_text_ed: "we",
-	            auto_join_text_ing: "we were",
-	            auto_join_text_reply: "we replied to",
-	            auto_join_text_url: "we were checking out",
-	            loading_text: "loading tweets...",
-				      query:"from%3Akyrug"
-	        });
-	    });
-	</script>
-	<!--
-		acknowledgment: tweet! jquery plugin by seaofclouds. http://github.com/seaofclouds/tweet/tree/master
-		 
-	//-->
-  <script type="text/javascript" charset="utf-8"> 
+	<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8"> 
 
   			function myFunc(arg){
   				//$(console.log(arg));
@@ -75,72 +48,108 @@
 
   	</script>
 	<script src="http://spreadsheets.google.com/feeds/list/pCQNoXf7oAzxCmdH-BR9ffw/1/public/values?alt=json-in-script&amp;callback=myFunc" type="text/javascript" charset="utf-8"></script>
+  
+	<script type="text/javascript" charset="utf-8">
+  	 // Toggle crazy
+   	$(document).ready(function(){
+   		$("#callink").click(function(){
+   			$("#calendar").slideToggle("slow");
+   			return false;
+   		});
+   	});
+	</script>
+	<script type="text/javascript" charset="utf-8">
+	 $(document).ready(function(){
+  		$("#maplink").click(function(){
+  			$("#map").slideToggle("slow");
+  			return false;
+  		});
+  	});
+	</script>
+	<script type="text/javascript" charset="utf-8">
+	 $(document).ready(function(){
+   		$("#ormlink").click(function(){
+   			$("#oreilly").slideToggle("slow");
+   			return false;
+   		});
+   	});
+	</script>
+	<script type="text/javascript" charset="utf-8">
+	 $(document).ready(function(){
+   		$("#mannlink").click(function(){
+   			$("#manning").slideToggle("slow");
+   			return false;
+   		});
+   	});
+	</script>
+	<script type="text/javascript" src="http://use.typekit.com/xih7ovh.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 
 <body>
-	<div class="container">
-		<div class="span-24 last column">
-		  <div id="header">
-		  	<img src="images/logo.jpg" width="270" height="93" alt="Kentucky Ruby User Group" />
-		  </div>
-		</div>
-		<div class="span-24 last column">
-			<div class="span-3 prepend-5 column">
-				<img src="images/ruby.jpg" width="100" height="100" alt="Ruby" />
-			</div>
-			<div class="span-12 append-3 last column">
-				<dl>
-					<dt>Where:</dt>
-					<dd>W.T. Young Library on the campus of the University of Kentucky<br />401 Hilltop Ave, Lexington, KY 40508 (<a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=401+Hilltop+Avenue,+Lexington,+KY+40508&amp;sll=38.03214,-84.502582&amp;sspn=0.001565,0.003417&amp;ie=UTF8&amp;t=h&amp;z=16" title="Google Maps">map</a> | <a href="http://www.uky.edu/Libraries/page.php?lweb_id=25" title="Driving Directions, Parking and Maps - Driving Directions">driving directions &amp; parking info</a>)<br />(please note: actual location may vary)</dd>
-					<dt>When:</dt>
-					<dd>Second Thursday of Each Month from 7:30 to 9 PM</dd>
-				</dl>
-			</div>
-		</div>
-		<div class="span-24 last">
-		  <div class="span-16 column">
-			<h3>Latest Info</h3>
-			<hr />
-		    <div class="tweet"></div>
-			For more, follow the <a href="http://groups.google.com/group/kyrug" title="Kentucky Ruby user group | Google Groups">Google Groups mailing list</a> or the <a href="http://twitter.com/kyrug" title="Twitter / kyrug">Twitter Feed</a>. Thanks.
-		  </div>
-		  <div class="span-8 last column">
-		    <h3>Communication</h3>
-			<hr />
-			<ul>
-				<li>Google Groups: <a href="http://groups.google.com/group/kyrug" title="Kentucky Ruby user group | Google Groups">KyRUG</a></li>
-				<li>IRC: irc.freenode.net #krug</li>
-				<li>Twitter: <a href="http://twitter.com/kyrug">twitter.com/kyrug</a></li>
-			</ul>
-		  </div>
-		</div>
-		<div class="span-24 last"> 
-    		  <div class="span-24 last column"> 
-    		    <hr /> 
-    		    <h3>Meetings</h3> 
-    		    <iframe src="http://www.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=200&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=75gbm70h476lfr7iqrjlt18sc4%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="200" frameborder="0" scrolling="no"></iframe> 
-    		    <br /> 
-    		  </div> 
+  <div id="wrapper">
+    <div id="content">
+      <div id="header">
+        <h1>KyRUG<br /><span>Kentucky Ruby Users Group</span></h1>
+      </div>
+      <div id="where">
+        <p><strong>Where</strong> ( <a href="#map" id="maplink">view map</a> )</p>
+        <p><a href="http://collexion.net/">Collexion Hackerspace</a></p>
+        <p>
+          111 &frac12; E Loudon Ave<br />
+          Near the Corner of Limestone and Loudon<br />
+          Behind the building labeled HopHop
+        </p>
+        <div id="map">
+          <!-- static google map //-->
+          <a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=111+1%2F2+East+Loudon+Avenue,+Lexington,+KY&sll=38.049409,-84.472718&sspn=0.020176,0.045447&ie=UTF8&hq=&hnear=111+E+Loudon+Ave,+Lexington,+Fayette,+Kentucky+40505&t=h&z=16"><img src="http://maps.google.com/maps/api/staticmap?center=111+1/2+E+Loudon+Ave,Lexington,KY&zoom=16&size=500x200&maptype=roadmap&markers=111+1/2+E+Loudon+Ave,Lexington,KY&sensor=false" /></a>
+        </div>
+      </div>
+      <div id="when">
+        <p><strong>When</strong> ( <a href="#calendar" id="callink">view calendar</a> )</p>
+        <p>Second Thursday of Each Month from 7:30 to 9 PM</p>
+        <div id="calendar">
+          <iframe src="http://www.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=200&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=75gbm70h476lfr7iqrjlt18sc4%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="200" frameborder="0" scrolling="no"></iframe> 
+        </div>
+      </div>
+      <div id="what">
+        <p><strong>What &amp; Why</strong></p>
+        <p>Ruby, Rails, Sinatra, jQuery, SQL, NoSQL... anything really.<br />
+          It&#x27;s great to have a group of friends who happen to be talented Rubyists to talk with, learn from, and be inspired by.</p>
+      </div>
+      <div id="who">
+        <p><strong>Who</strong></p>
+        <ul class="people"></ul>
+      </div>
+      <div id="how">
+        <p><strong>How</strong></p>
+        <ul>
+          <li><a href="http://ruby-lang.org/en/" title="Ruby Programming Language">Ruby Language</a></li>
+          <li><a href="http://groups.google.com/group/kyrug" title="Kentucky Ruby user group | Google Groups">KyRUG on Google Groups</a></li>
+          <li>IRC: irc.freenode.net #krug</li>
+          <li><a href="http://twitter.com/kyrug" title="Follow KyRUG on Twitter">KyRUG on Twitter</a></li>
+          <li><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=drPJ5SNX3BGivu5M6kjTQA" title="Pipes: KyRUG delicious feed">KyRUG del.icio.us feed – Yahoo Pipes</a></li>
+          <li>User Group Discounts from <a href="#oreilly" id="ormlink">O'Reilly Media</a> and <a href="#manning" id="mannlink">Manning Publications</a></li>
+        </ul>
+        <div id="oreilly">
+          <!-- DSUG //-->
+          <a href="http://oreilly.com/ruby/index.html" title="Ruby - O'Reilly Media"><img src="http://ug.oreilly.com/images/ads/ug_discount_125x125.gif" /></a>
+        </div>
+        <div id="manning">
+          <!-- UG367 //-->
+          <a href="http://www.manning.com/" title="Manning Publications Co."><img src="http://www.manning.com/ugprogram/images/banner1.jpg" /></a>
+        </div>
+      </div>
+      <div id="footer"> 
+        <p>We <span class="heart">&hearts;</span> Ruby and You</p>
+      </div>
+      <div id="sublegal">
+        <p><a href="http://rubyidentity.org/" title="Ruby Visual Identity Team">Ruby icon</a> is copyright &copy; 2006, Yukihiro Matsumoto used under a <a href="http://creativecommons.org/licenses/by-sa/2.5/" title="Creative Commons &mdash;Attribution-ShareAlike 2.5 Generic">Creative Commons Attribution-ShareAlike 2.5 License</a></p>
+        <p>&copy; 2010 Kentucky Ruby Users Group. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.</p>
+      </div>
     </div>
-		<div class="span-24 last column">
-			<hr />
-			<h3>Rubyists | Projects</h3>
-			<ul class="people"></ul>
-		</div>
-		<div class="span-24 last column">
-			<hr />
-			<h3>Links</h3>
-			<ul>
-				<li><a href="http://ruby-lang.org/en/">Ruby Language</a></li>
-				<li><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=drPJ5SNX3BGivu5M6kjTQA" title="Pipes: KyRUG delicious feed">KyRUG del.icio.us feed – Yahoo Pipes</a></li>
-				<li><a href="http://www.rubidine.com/" title="Rubidine">Rubidine – Ruby on Rails Development</a></li>
-			</ul>
-		</div>
-	</div>
-	<div id="footer">
-		<hr />
-		<p>We <span class="heart">&hearts;</span> Ruby!</p>
-	</div>
-	
+    
+  </div>
+
 </body>
 </html>

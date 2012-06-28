@@ -5,15 +5,15 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>KyRUG - Kentucky Ruby Users Group</title>
-  <meta name="author" content="Chase Southard with lots of help and inspiration from friends">
-  <meta name="copyright" content="Copyright 2010 Kentucky Ruby Users Group">
+  <meta name="author" content="collective KyRUG experience" />
+  <meta name="copyright" content="Copyright 2010 Kentucky Ruby Users Group" />
   <meta name="keywords" content="Ruby, Users Group, Ruby Users Group, Lexington, KY" />
-	<meta name="description" content="Kentucky Ruby Users Group meets monthly in Lexington, Ky. Our interests are widespread, but our language is the same. Ruby.">
+	<meta name="description" content="Kentucky Ruby Users Group meets monthly in Lexington, Ky. Our interests are widespread, but our language is the same. Ruby." />
 	<link rel="icon" type="image/vnd.microsoft.icon" href="ruby.ico" />
-	<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" charset="utf-8" />
+	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" charset="utf-8" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript" charset="utf-8"> 
+	<script type="text/javascript" charset="utf-8">
 
   			function myFunc(arg){
   				//$(console.log(arg));
@@ -22,15 +22,15 @@
   					var person = this.gsx$name.$t;
   					var githubid = this.gsx$githubid.$t;
   					var template = '<a href="http://github.com/'+githubid+'">'+person+'</a>';
-  					var githubFeed = 'http://github.com/api/v1/json/'+githubid+'?callback=?';
+  					var githubFeed = 'https://api.github.com/users/'+githubid+'/repos?callback=?';
 
   					$(document).ready(function(){
-  						//acknowledgement: the following block fixed courtsey of Leslie Hensley. 
+  						//acknowledgement: the following block fixed courtsey of Leslie Hensley.
   						var personUl = $('<ul></ul>');
               $('.people').append('<li>' + template + '</li>').append(personUl);
-              $.getJSON(githubFeed, function(data){
-  							//console.log(data);
-  							$(data.user.repositories).each(function(){
+              $.getJSON(githubFeed, function(response){
+  							//console.log(response);
+  							$(response.data).each(function(){
   								//console.log(this);
   								//console.log(this.name);
   								if (!this.private) {
@@ -48,7 +48,6 @@
 
   	</script>
 	<script src="http://spreadsheets.google.com/feeds/list/pCQNoXf7oAzxCmdH-BR9ffw/1/public/values?alt=json-in-script&amp;callback=myFunc" type="text/javascript" charset="utf-8"></script>
-  
 	<script type="text/javascript" charset="utf-8">
   	 // Toggle crazy
    	$(document).ready(function(){
@@ -109,7 +108,7 @@
         <p><strong>When</strong> ( <a href="#calendar" id="callink">view calendar</a> )</p>
         <p>Second Wednesday (usually) of Each Month from 7:00 to ~8:30 PM</p>
         <div id="calendar">
-          <iframe src="http://www.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=200&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=75gbm70h476lfr7iqrjlt18sc4%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="200" frameborder="0" scrolling="no"></iframe> 
+          <iframe src="http://www.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=200&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=75gbm70h476lfr7iqrjlt18sc4%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="200" frameborder="0" scrolling="no"></iframe>
         </div>
       </div>
       <div id="what">
@@ -140,7 +139,7 @@
           <a href="http://www.manning.com/" title="Manning Publications Co."><img src="http://www.manning.com/ugprogram/images/banner1.jpg" /></a>
         </div>
       </div>
-      <div id="footer"> 
+      <div id="footer">
         <p>We <span class="heart">&hearts;</span> Ruby and You</p>
       </div>
       <div id="sublegal">
@@ -148,7 +147,7 @@
         <p>&copy; 2012 Kentucky Ruby Users Group. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.</p>
       </div>
     </div>
-    
+
   </div>
 
 </body>
